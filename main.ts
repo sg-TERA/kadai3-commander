@@ -1,11 +1,11 @@
-radio.onReceivedNumber(function (receivedNumber) {
-    basic.showNumber(radio.receivedPacket(RadioPacketProperty.SignalStrength))
-})
 input.onButtonPressed(Button.A, function () {
-    radio.sendNumber(5)
+    radio.sendNumber(1)
 })
-radio.setGroup(1)
-radio.sendNumber(0)
-basic.forever(function () {
-	
+input.onButtonPressed(Button.AB, function () {
+    radio.sendNumber(3)
 })
+input.onButtonPressed(Button.B, function () {
+    radio.sendNumber(2)
+})
+radio.setGroup(9)
+radio.sendNumber(123456789)
